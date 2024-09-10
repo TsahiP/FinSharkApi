@@ -4,6 +4,11 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <!-- 
+      This configuration setting controls the behavior of invariant globalization in the project.
+      When set to 'false', it allows for non-invariant globalization, meaning that the project can support different cultures and languages.
+      When set to 'true', it enforces invariant globalization, meaning that the project will use a fixed set of culture-specific behaviors regardless of the system's culture settings.
+    -->
     <InvariantGlobalization>false</InvariantGlobalization>
   </PropertyGroup>
 

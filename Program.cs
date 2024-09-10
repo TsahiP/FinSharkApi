@@ -64,8 +64,10 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
 builder.Services.AddScoped<IStockRepository, StockRepository>(); // Add the StockRepository service to the container with the IStockRepository interface
 builder.Services.AddScoped<ICommentsRepository, CommentRepository>(); // Add the CommentRepository service to the container with the ICommentsRepository interface
 
-builder.Services.AddScoped<ITokenService,TokenService>();
-builder.Services.AddScoped<IPortfolioRepository,PortfolioRepository>();
+builder.Services.AddScoped<ITokenService, TokenService>(); // Register TokenService as the implementation of ITokenService with scoped lifetime
+builder.Services.AddScoped<IPortfolioRepository, PortfolioRepository>(); // Register PortfolioRepository as the implementation of IPortfolioRepository with scoped lifetime
+builder.Services.AddScoped<IFMPService, FMPService>(); // Register FMPService as the implementation of IFMPServise with scoped lifetime
+builder.Services.AddHttpClient<IFMPService, FMPService>(); // Register FMPService as the implementation of IFMPServise with transient lifetime for HTTP client
 
 builder.Services.AddControllers().AddNewtonsoftJson(option =>
 {

@@ -25,7 +25,7 @@ namespace api.Dtos.Stocks
         [Range(1, 1000000000)]
         public decimal LastDiv { get; set; }
         [Required]
-        [MaxLength(10, ErrorMessage = "Industry cannot be over 10 Chareacters.")]
+        [MaxLength(20, ErrorMessage = "Industry cannot be over 10 Chareacters.")]
 
         public string Industry { get; set; } = string.Empty;
         [Range(1, 5000000000)]

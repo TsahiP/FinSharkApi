@@ -14,17 +14,16 @@ using Microsoft.EntityFrameworkCore;
 
 namespace api.Controllers
 {
-    [EnableCors("AllowFrontend")]
     [Route("api/stock")]
     [ApiController]
     public class StockController : ControllerBase
     {
-        // private readonly ApplicationDBContext _context;
+        private readonly ApplicationDBContext _context;
         private readonly IStockRepository _stockRepository;
         public StockController(ApplicationDBContext context, IStockRepository stockRepository)
         {
             _stockRepository = stockRepository;
-            // _context = context;
+            _context = context;
         }
         // GET api/stock
         [HttpGet]

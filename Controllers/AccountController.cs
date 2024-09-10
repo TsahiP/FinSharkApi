@@ -13,7 +13,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace api.Controllers
 {
-    [EnableCors("AllowFrontend")]
     [Route("api/account")]
     [ApiController]
 
